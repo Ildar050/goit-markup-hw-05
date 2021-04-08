@@ -57,7 +57,7 @@
         <section class="hero">
             <h1 class="hero-list">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br> ДЛЯ ВАШЕГО БИЗНЕСА
             </h1>
-            <button type="button" class="btn-primary " >Заказать услугу</button>
+            <button type="button" class="btn-primary " data-modal-open>Заказать услугу</button>
         </section>
         <!-- /hero -->
         <!-- description -->
@@ -481,9 +481,9 @@
             <!-- /contacts -->
             
         </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="close">
+            <button type="button" class="close" data-modal-close>
                 <svg class="icon-close" >
                     <use href="./images/icons.svg#icon-closex">
                     </use>
@@ -492,19 +492,7 @@
         </div>
 
     </div>
-    <script>
-         const refs = {
-                openModalBtn: document.querySelector('[data-modal-open]'),
-                closeModalBtn: document.querySelector('[data-modal-close]'),
-                modal: document.querySelector('[data-modal]'),
-            };
-
-            refs.openModalBtn.addEventListener('click', toggleModal);
-            refs.closeModalBtn.addEventListener('click', toggleModal);
-
-            function toggleModal() {
-                refs.modal.classList.toggle('is-hidden');
-            }
+    <script src="./js/modal.js">
     </script>
 
 </body>
